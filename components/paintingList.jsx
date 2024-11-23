@@ -11,6 +11,7 @@ export default function paintingList() {
     async function fetchData() {
       const res = await fetch("/api/getPaintings");
       const data = await res.json();
+      console.log(data);
       setItems(data.data);
       setLoading(false);
     }
